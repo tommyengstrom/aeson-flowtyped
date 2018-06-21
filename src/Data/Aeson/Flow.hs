@@ -84,7 +84,7 @@ import           Data.Text                        (Text)
 import qualified Data.Text                        as T
 import qualified Data.Text.IO                     as TIO
 import qualified Data.Text.Lazy                   as TL
-import           Data.Time                        (UTCTime)
+import           Data.Time                        (UTCTime, Day, LocalTime)
 import qualified Data.Tree                        as Tree
 import           Data.Typeable
 import           Data.Vector                      (Vector)
@@ -788,6 +788,16 @@ instance FlowTyped A.Value where
   flowTypeName _ = Nothing
 
 instance FlowTyped UTCTime where
+  isPrim  _ = False
+  flowType _ = Fix (Prim String)
+  flowTypeName _ = Nothing
+
+instance FlowTyped Day where
+  isPrim  _ = False
+  flowType _ = Fix (Prim String)
+  flowTypeName _ = Nothing
+
+instance FlowTyped LocalTime where
   isPrim  _ = False
   flowType _ = Fix (Prim String)
   flowTypeName _ = Nothing
