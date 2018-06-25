@@ -25,38 +25,39 @@
 --
 -- Does not currently support the 'unwrapUnaryRecords' option.
 module Data.Aeson.Flow
-  ( -- * AST types
-    FlowTyped (..)
-  , FlowType
-  , Fix (..)
-  , FlowTypeF (..)
-    -- * Code generation
-    -- ** Wholesale ES6/flow modules
-  , FlowModuleOptions (..)
-  , defaultFlowModuleOptions
-  , Export (..)
-  , generateFlowModule
-  , writeFlowModule
-  , exportFlowTypeAs
-  , flowTypeAs
-    -- * Utility functions
-  , showFlowType
-  , dependencies
-  , exportsDependencies
-  , FlowTyFields (..)
-  , DeconstructField
-    -- * Internals
-  , defaultFlowType
-  , defaultFlowTypeName
-  , FlowName (..)
-  , PrimType (..)
-  , GFlowTyped
-  , FlowTypeI
-  , Info (..)
-  , Var (..)
-  , Typeable
-  , typeRep
-  ) where
+       ( -- * AST types
+         FlowTyped (..)
+       , FlowType
+       , Fix (..)
+       , FlowTypeF (..)
+         -- * Code generation
+         -- ** Wholesale ES6/flow modules
+       , FlowModuleOptions (..)
+       , defaultFlowModuleOptions
+       , Export (..)
+       , generateFlowModule
+       , writeFlowModule
+       , exportFlowTypeAs
+       , flowTypeAs
+         -- * Utility functions
+       , showFlowType
+       , dependencies
+       , exportsDependencies
+       , FlowTyFields (..)
+       , DeconstructField
+         -- * Internals
+       , defaultFlowType
+       , defaultFlowTypeName
+       , FlowName (..)
+       , PrimType (..)
+       , GFlowTyped
+       , FlowTypeI
+       , Info (..)
+       , Var (..)
+       , Typeable
+       , typeRep
+       , immediateDeps
+       ) where
 import           Control.Monad
 import           Control.Monad.Trans.State.Strict
 import qualified Data.Aeson                       as A
