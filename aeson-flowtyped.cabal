@@ -1,11 +1,11 @@
--- This file has been generated from package.yaml by hpack version 0.21.2.
+-- This file has been generated from package.yaml by hpack version 0.28.2.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ced57bbef6c7c2c16210827ed529eb13b29c0f96c697b5f095bbaa761b9077d8
+-- hash: a6ab32d8e4157f250da895af78676b174be7c972145ffed12567a2f47952f8f6
 
 name:           aeson-flowtyped
-version:        0.9.1
+version:        0.10.1
 synopsis:       Create Flow type definitions from Haskell data types.
 description:    Create Flow type definitions from Haskell data types.
 category:       Web
@@ -23,11 +23,15 @@ source-repository head
   location: https://github.com/mikeplus64/aeson-flowtyped
 
 library
+  exposed-modules:
+      Data.Aeson.Flow
+  other-modules:
+      Paths_aeson_flowtyped
   hs-source-dirs:
       src
   build-depends:
       aeson >=0.8
-    , base >=4.9 && <4.11
+    , base >=4.9 && <4.12
     , containers
     , free
     , recursion-schemes
@@ -39,10 +43,6 @@ library
     , unordered-containers
     , vector
     , wl-pprint
-  exposed-modules:
-      Data.Aeson.Flow
-  other-modules:
-      Paths_aeson_flowtyped
   default-language: Haskell2010
 
 test-suite aeson-flowtyped
@@ -55,7 +55,7 @@ test-suite aeson-flowtyped
   build-depends:
       aeson >=0.8
     , aeson-flowtyped
-    , base >=4.9 && <4.11
+    , base >=4.9 && <4.12
     , containers
     , recursion-schemes
     , tasty
@@ -63,4 +63,4 @@ test-suite aeson-flowtyped
     , text
     , unordered-containers
     , vector
-default-language: Haskell2010
+  default-language: Haskell2010

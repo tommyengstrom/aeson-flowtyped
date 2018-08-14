@@ -1,2 +1,4 @@
-resolver: lts-11.0
+resolver: lts-12.2
 packages: ['.']
+extra-deps:
+    - wl-pprint-1.2.1
